@@ -12,6 +12,11 @@ public class Zhaoliu implements IPerson {
 
     @Override
     public void findLove() {
-        System.out.println("ykqr");
+        System.out.println("赵六找媳妇");
+    }
+
+    @Override
+    public void buyInsure() {
+        System.out.println("赵六买保险");
     }
 }

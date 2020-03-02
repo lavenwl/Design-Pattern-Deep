@@ -16,6 +16,6 @@ public class Zhangsan implements IPerson {
 
     @Override
     public void buyInsure() {
-
+        System.out.println("这里买保险");
     }
 }

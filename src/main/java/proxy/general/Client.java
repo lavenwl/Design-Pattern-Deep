@@ -6,4 +6,8 @@ package proxy.general;
  * @Date: 2020-03-01 20:21
  */
 public class Client {
+    public static void main(String[] args) {
+        Proxy proxy = new Proxy(new RealSubject());
+        proxy.request();
+    }
 }
