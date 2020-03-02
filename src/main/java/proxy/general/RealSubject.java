@@ -8,6 +8,6 @@ package proxy.general;
 public class RealSubject implements ISubject{
     @Override
     public void request() {
-
+        System.out.println("Real service is called");
     }
 }

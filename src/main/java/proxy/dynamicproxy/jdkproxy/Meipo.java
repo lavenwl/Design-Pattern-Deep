@@ -1,6 +1,6 @@
 package proxy.dynamicproxy.jdkproxy;
 
-import proxy.staticproxy.IPerson;
+import proxy.dynamicproxy.IPerson;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -21,14 +21,15 @@ public class Meipo implements InvocationHandler {
         this.target = target;
         Class<?> clazz = target.getClass();
 
-        return new Proxy.newProxyInstance(clazz.getClassLoader(), [], clazz.getInterfaces(), this);
+        return (IPerson) Proxy.newProxyInstance(clazz.getClassLoader(), clazz.getInterfaces(), this);
     }
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         before();
-        Object result = method.invoke(this.target.args);
+        Object result = method.invoke(this.target, args);
         after();
+        return result;
     }
 
     private void after() {

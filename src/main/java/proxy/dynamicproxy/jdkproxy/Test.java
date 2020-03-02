@@ -1,6 +1,11 @@
 package proxy.dynamicproxy.jdkproxy;
 
-import proxy.staticproxy.IPerson;
+
+import proxy.dynamicproxy.IPerson;
+import sun.misc.ProxyGenerator;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 
 /**
  * @Description:
@@ -13,8 +18,19 @@ public class Test {
         IPerson zhangsan = meipo.getInstance(new Zhangsan());
         zhangsan.findLove();
 
-        IPerson zhangsan = meipo.getInstance(new Zhaoliu());
-        zhangsan.findLove();
+        IPerson zhaoliu = meipo.getInstance(new Zhaoliu());
+        zhaoliu.findLove();
 
+
+        // 将JDK动态代理的对象写入磁盘, 反编译后查看动态生成对象的代码
+        IPerson person = new Meipo().getInstance(new Zhangsan());
+        try {
+            FileOutputStream os = new FileOutputStream("$Proxy0.class");
+            byte[] bytes = ProxyGenerator.generateProxyClass("$Proxy0", new Class[]{IPerson.class});
+            os.write(bytes);
+            os.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
