@@ -18,4 +18,13 @@ public class Zhangsan implements IPerson {
     public void buyInsure() {
         System.out.println("这里买保险");
     }
+
+    @Override
+    public void match(Integer i) {
+        if (i == 1) {
+            System.out.println("你是我的公主");
+        } else {
+            System.out.println("滚粗!!!");
+        }
+    }
 }

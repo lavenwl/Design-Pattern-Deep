@@ -8,6 +8,5 @@ import java.lang.reflect.Method;
  * @Date: 2020-03-01 21:18
  */
 public interface GPInvocationHandler {
-    public Object invoke(Object proxy, Method method, Object[] args)
-            throws Throwable;
+    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable;
 }

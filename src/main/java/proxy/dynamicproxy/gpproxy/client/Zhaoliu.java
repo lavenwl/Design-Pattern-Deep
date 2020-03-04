@@ -1,4 +1,4 @@
-package proxy.dynamicproxy.jdkproxy;
+package proxy.dynamicproxy.gpproxy.client;
 
 
 import proxy.dynamicproxy.IPerson;

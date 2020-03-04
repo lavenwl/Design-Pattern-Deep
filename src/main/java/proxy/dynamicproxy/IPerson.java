@@ -8,4 +8,5 @@ package proxy.dynamicproxy;
 public interface IPerson {
     void findLove();
     void buyInsure();
+    void match(Integer i);
 }
