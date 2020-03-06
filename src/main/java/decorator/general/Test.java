@@ -7,5 +7,6 @@ public class Test {
         battercake = new SausageDecorator(battercake);
         System.out.println(battercake.getMsg());
         System.out.println(battercake.getPrice());
+        // test git revert
     }
 }
