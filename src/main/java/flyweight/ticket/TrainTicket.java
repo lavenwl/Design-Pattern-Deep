@@ -1,5 +1,7 @@
 package flyweight.ticket;
 
+import java.util.Random;
+
 /**
  * @Description:
  * @Author: laven
@@ -18,6 +20,7 @@ public class TrainTicket implements ITicket {
 
     @Override
     public void showInfo(String bunk) {
-//        this.price = new Integer();
+        this.price = new Random().nextInt(500);
+        System.out.println(String.format("%s->%s: %s 价格：%s元", this.from, this.to, bunk, this.price));
     }
 }

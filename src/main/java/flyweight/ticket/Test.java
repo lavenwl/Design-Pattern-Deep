@@ -9,6 +9,8 @@ public class Test {
     public static void main(String[] args) {
         ITicket ticket = TicketFactory.queryTicket("北京西", "长沙");
         ticket.showInfo("硬座");
+        ITicket ticket2 = TicketFactory.queryTicket("北京西", "长沙");
+        ticket2.showInfo("软座");
 
     }
 }
