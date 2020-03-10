@@ -1,4 +1,4 @@
-package adapter.demo.classadapter;
+package adapter.demo.objectadapter;
 
 /**
  * @Description:
