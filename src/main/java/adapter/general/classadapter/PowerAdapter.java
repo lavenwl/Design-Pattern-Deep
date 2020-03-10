@@ -1,4 +1,4 @@
-package adapter.demo.classadapter;
+package adapter.general.classadapter;
 
 public class PowerAdapter extends AC220 implements DC5 {
     @Override
