@@ -13,9 +13,10 @@ public class LoginForTiktokDecorator extends PassportForThirdAdapterDecorator {
         super(passportForThirdAdapter);
     }
 
+
+
     @Override
-    protected ResultMsg loginForTiktok(String openId) {
-//        return super.passportForThirdAdapter.processLogin(openId);
-        return null;
+    public ResultMsg loginForTiktok(String openId) {
+        return super.passportForThirdAdapter.processLogin(openId, LoginForTiktokAdapter.class);
     }
 }

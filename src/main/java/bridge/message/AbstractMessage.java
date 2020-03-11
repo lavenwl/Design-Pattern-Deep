@@ -12,7 +12,7 @@ public abstract class AbstractMessage {
         this.message = message;
     }
 
-//    void snedMessage(String message, String toUser) {
-//        message.send(message, toUser);
-//    }
+    void sendMessage(String message, String toUser) {
+        this.message.send(message, toUser);
+    }
 }

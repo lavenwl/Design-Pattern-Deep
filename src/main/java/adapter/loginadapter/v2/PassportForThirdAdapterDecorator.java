@@ -10,9 +10,9 @@ import adapter.loginadapter.v1.IpassportForThird;
  */
 public abstract class PassportForThirdAdapterDecorator implements IpassportForThird {
 
-    protected IpassportForThird passportForThirdAdapter;
+    protected PassportForThirdAdapter passportForThirdAdapter;
 
-    public PassportForThirdAdapterDecorator(IpassportForThird passportForThirdAdapter) {
+    public PassportForThirdAdapterDecorator(PassportForThirdAdapter passportForThirdAdapter) {
         this.passportForThirdAdapter = passportForThirdAdapter;
     }
 

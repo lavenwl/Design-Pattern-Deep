@@ -10,7 +10,9 @@ public class NormalMessage extends AbstractMessage {
         super(message);
     }
 
+    @Override
     void sendMessage(String message, String toUser) {
         message = "[普通]" + message;
+        super.sendMessage(message, toUser);
     }
 }

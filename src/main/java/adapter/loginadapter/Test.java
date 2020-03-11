@@ -1,6 +1,8 @@
 package adapter.loginadapter;
 
-import adapter.loginadapter.v1.PassportForThirdAdapter;
+
+import adapter.loginadapter.v2.LoginForTiktokDecorator;
+import adapter.loginadapter.v2.PassportForThirdAdapter;
 
 /**
  * @Description:
@@ -10,8 +12,7 @@ import adapter.loginadapter.v1.PassportForThirdAdapter;
 public class Test {
     public static void main(String[] args) {
         PassportForThirdAdapter adapter = new PassportForThirdAdapter();
-        adapter.login("tom", "123456");
-        adapter.loginForQQ("qweasdaqweqsda");
-        adapter.loginForWechat("qweqdasczcssas");
+        LoginForTiktokDecorator tiktok = new LoginForTiktokDecorator(adapter);
+        tiktok.loginForTiktok("123awedqwdq");
     }
 }
