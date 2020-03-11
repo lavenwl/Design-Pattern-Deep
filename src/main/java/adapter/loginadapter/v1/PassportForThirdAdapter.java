@@ -1,4 +1,7 @@
-package adapter.loginadapter;
+package adapter.loginadapter.v1;
+
+import adapter.loginadapter.PassportService;
+import adapter.loginadapter.ResultMsg;
 
 /**
  * @Description:
@@ -8,22 +11,22 @@ package adapter.loginadapter;
 public class PassportForThirdAdapter extends PassportService implements IpassportForThird {
     @Override
     public ResultMsg loginForQQ(String openId) {
-        return null;
+        return loginForRegist(openId, null);
     }
 
     @Override
     public ResultMsg loginForWechat(String openId) {
-        return null;
+        return loginForRegist(openId, null);
     }
 
     @Override
     public ResultMsg loginForToken(String token) {
-        return null;
+        return loginForRegist(token, null);
     }
 
     @Override
     public ResultMsg loginForTelphone(String phone, String code) {
-        return null;
+        return loginForRegist(phone, null);
     }
 
     private ResultMsg loginForRegist(String username, String password) {

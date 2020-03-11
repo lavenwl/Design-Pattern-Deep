@@ -1,4 +1,6 @@
-package adapter.loginadapter;
+package adapter.loginadapter.v1;
+
+import adapter.loginadapter.ResultMsg;
 
 /**
  * @Description:

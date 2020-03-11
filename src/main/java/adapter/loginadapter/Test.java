@@ -1,5 +1,7 @@
 package adapter.loginadapter;
 
+import adapter.loginadapter.v1.PassportForThirdAdapter;
+
 /**
  * @Description:
  * @Author: laven
