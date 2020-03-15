@@ -18,6 +18,7 @@ public abstract class AbstractCourse {
         postResource();
 
         // 布置作业
+        postHomework();
         
         // 检查作业
         if (needCheckHomework()) {
@@ -25,27 +26,28 @@ public abstract class AbstractCourse {
         }
     }
 
+    protected void postHomework(){
+        System.out.println("布置作业");
+    };
+
     protected abstract void checkHomework();
 
-
-    protected boolean needCheckHomework() {
-        return false;
-    }
+    protected abstract boolean needCheckHomework();
 
     protected void postResource(){
-        System.out.println("");
+        System.out.println("上传课程资料");
     }
 
     protected void liveVideo(){
-        System.out.println("");
+        System.out.println("录视频");
     }
 
     protected void createPPT(){
-        System.out.println("");
+        System.out.println("制作ppt");
     }
 
     protected void postPreResource(){
-        System.out.println("");
+        System.out.println("上传课程资料");
     }
 
 }
