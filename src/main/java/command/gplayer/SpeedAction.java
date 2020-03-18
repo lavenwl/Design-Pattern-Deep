@@ -1,7 +1,7 @@
-package command.actions;
+package command.gplayer;
 
-import command.Gplayer;
-import command.IAction;
+import command.gplayer.Gplayer;
+import command.gplayer.IAction;
 
 /**
  * @Description:
